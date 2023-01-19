@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Provengo.uber">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Provengo.uber.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

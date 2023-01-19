@@ -2,30 +2,28 @@
 This is a repository for assignment 3 of the Software Quality Engineering course at the [Ben-Gurion University](https://in.bgu.ac.il/), Israel.
 
 ## Assignment Description
-In this assignment, we tested an open-source software called [$$*TODO* software name$$](https://address-of-the-project.com).
+In this assignment, we tested an open-source software called opencart (https://www.opencart.com/).
 
-$$*TODO* Add some general description about the software$$
+OpenCart is an online store management system. It is PHP-based, using a MySQL database and HTML components. Support is provided for different languages and currencies. It is freely available under the GNU General Public License
 
 ## Installation
-$$*TODO* Write instructions on how to install the software and prepare the testing environment$$
+We installed a server called xampp.
+We installed the openCart program.
 
 ## What we tested
-$$*TODO* Add a description of the module and the user stories that you chose to test.
-For example, in the case of the Moodle example, you can write something like this:
+We tested buying a product from the store and deleting a product from the store.
 
-We tested the quiz module that allows for creating and taking quizzes. We chose to test the following user stories: 
+*User story:* An unregistered user buys a product
 
-*User story:* A teacher adds a new quiz to the course with two yes/no questions
+*Preconditions:* The product is available and in stock.
 
-*Preconditions:* There is a course with a teacher
+*Expected outcome:* The purchase was made successfully
 
-*Expected outcome:* The quiz is added to the course.
+*User story:* An admin deletes a product.
 
-*User story:* A students attempts a quiz and answers correctly.
+*Preconditions:*  The product is available and in stock.
 
-*Preconditions:* There is a course with a quiz with two yes/no questions and the quiz grade is calculated automatically and the grade is visible to the students upon submission.
-
-*Expected outcome:* The student receives 100.
+*Expected outcome:* The deletion was made successfully
 $$
 
 ## How we tested
@@ -33,20 +31,20 @@ We used two different testing methods:
 1. [Cucumber](https://cucumber.io/), a BDD testing framework.
 2. [Provengo](https://provengo.tech/), a story-based testing framework.
 
-Each of the testing methods is elaborated in its own directory. 
+Each of the testing methods is elaborated in its own directory.
 
 ## Results
-Update all README.md files (except for d-e, see Section 1). Specifically, replace all $$*TODO*…$$ according to the instructions inside the $$.
-
+u can see the results of the tests in the [results](https://drive.google.com/file/d/13QZAzntffq2b_9HXrfl7r1h98BDHClhZ/view?usp=share_link) url.
+we can see in the video that at the moment that the admin deletes the product, the product is deleted from the store and the user can't buy it anymore.
+and the driver crashes when the user tries to continue the process.
 ## Detected Bugs
 We detected the following bugs:
 
-1. Bug 1: 
-   1. General description: ...
-   2. Steps to reproduce: ...
-   3. Expected result: ...
-   4. Actual result: ...
+1. Bug 1:
+   1. General description: When a user is in the process of buying a product and in parallel an admin is deleting the same product, the program crashes and
+      is not handling well with it.
+   2. Steps to reproduce: user addes a product to the cart, go to checkout and starts entering personal details, and simultaneously an admin user deletes the product.
+   3. Expected result: The admin or the user gets an error result that the product can not be deleted or purchased
+   4. Actual result: the program crashes
    5. Link to the bug report: (you are encouraged to report the bug to the developers of the software)
-2. Bug 2: ...
 
-$$*TODO* if you did not detect the bug, you can delete this section$$  
